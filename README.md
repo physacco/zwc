@@ -56,3 +56,10 @@ This is a small Chinese word count tool.
     vmap zwc :call Zwc() <Home><Del><Del><Del><Del><Del><CR>
 
 打开要阅读或编辑的文件，按 Shift+v键 进入行选择模式，选中若干行，然后直接按下 zwc 3个键，即可显示字数统计结果。
+
+### Emacs命令 zwc
+
+1. 选中一段文本 (e.g. ``C-Spc C-n``)
+2. 将选中的文本发送给zwc子进程
+    * ``M-x shell-command-on-region RET zwc RET``
+    * ``M-| zwc RET``
