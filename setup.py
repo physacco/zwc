@@ -1,13 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-import sys
 from setuptools import setup
-
-if sys.platform == 'win32':
-    scripts = ['zwc.bat']
-else:
-    scripts = ['zwc']
 
 setup(
   name='zwc',
@@ -19,6 +13,6 @@ setup(
   author_email='physacco@gmail.com',
   license='MIT',
   py_modules=['zwc', 'zwc_cli'],
-  scripts=scripts,
+  scripts=['zwc', 'zwc.bat'],
   install_requires=['six']
 )
