@@ -13,19 +13,25 @@ This is a small Chinese word count tool.
 
     pip install zwc
 
+## 升级
+
+    pip install --upgrade zwc
+
 ## 用法
 
 ### 命令行工具 zwc
 
 把要统计的文本通过管道输入zwc：
 
-    zwc < foo.txt
-    cat foo.txt | zwc
+    $ zwc < foo.txt
+    $ cat foo.txt | zwc
 
 如果输入数据的字符编码不是utf-8：
 
-    zwc --encoding=gb18030 < foo.txt
-    cat foo.txt | zwc --encoding=gb18030
+    $ zwc --encoding=gb18030 < foo.txt
+    $ cat foo.txt | zwc --encoding=gb18030
+
+`--encoding=gb18030` 可以简写为 `-E gb18030`
 
 ### Python模块 zwc.py
 

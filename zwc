@@ -1,6 +1,0 @@
-#!/usr/bin/env python
-# encoding: utf-8
-
-import zwc_cli
-
-zwc_cli.main()

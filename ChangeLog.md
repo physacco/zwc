@@ -1,7 +1,14 @@
 Change Log
 ==========
 
-## Release 0.2.0 - 2015/11/25 
+## Release 0.3.0 - 2015/12/17
+
+Features:
+
+- Merge module `zwc_cli` into `zwc`
+- setup.py: use `entry_points` instead of `scripts`
+
+## Release 0.2.0 - 2015/11/25
 
 Features:
 
