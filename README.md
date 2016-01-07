@@ -50,16 +50,17 @@ This is a small Chinese word count tool.
 
 将以下代码加入vim配置文件：
 
-    function Zwc()
+    function! Zwc() range
       " send selected lines to system command *zwc* and print the output
       let select_beg_line = getpos("'<")[1]
       let select_end_line = getpos("'>")[1]
       let lines = getline(select_beg_line, select_end_line)
       let input = join(lines, "\n") . "\n"
-      echo system("zwc", input)
+      let output = system("zwc", input)
+      echom substitute(output, '\v(^\_s+)|(\_s+$)', '', 'g')
     endfunction
 
-    vmap zwc :call Zwc() <Home><Del><Del><Del><Del><Del><CR>
+    vnoremap zwc :call Zwc()<CR>
 
 打开要阅读或编辑的文件，按 Shift+v键 进入行选择模式，选中若干行，然后直接按下 zwc 3个键，即可显示字数统计结果。
 
